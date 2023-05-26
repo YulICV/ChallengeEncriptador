@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Encriptador de texto </title>
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="image/logoalura.png" alt="logo Alura">
+    </header>
+
+    <div class="container">
+        <div class="encriptador">
+            <div class="cajaTexto">
+                <textarea id="texto" class="mensajeEncriptador" type="text" placeholder="Ingrese el texto aquí" onkeyup="verificarTexto()"></textarea>
+            </div>
+            <div class="icono">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                </svg>  
+                <span>Solo letras minúsculas y sin acentos</span> 
+            </div>
+            <div class="cajaBotones">
+                <button class="boton1" onclick="encriptarTexto()" disabled>Encriptar</button>
+                <button class="boton2" onclick="desencriptarTexto()" disabled>Desencriptar</button>
+            </div>
+        </div>
+
+        <div id="visor">
+            <img src="image/Muñeco.svg" alt="">
+            <div class="mensaje">
+                <p>Ningún mensaje fue encontrado</p>
+                <p>Ingrese el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <div id="copiar">
+                <button class="boton3" onclick="copiarTexto()">Copiar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Create by Yuliana Cruz Vivas - </p>
+        <p>Challenge One Alura - </p>
+        <p>&copy 2023</p>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>El texto solo debe contener minúsculas y sin acentos.</p>
+            <p>Intentalo de nuevo gracias.</p>
+            <img class="ventana-modal" src="image/decoracionventanamodal.png" alt="Decoración para ventana modal de un buho">
+        </div>
+    </div>
+    
+
+    <script src="code.js"></script>
+</body>
+
+</html>
